@@ -1,19 +1,9 @@
 // complete the given function
 
 function palindrome(str){
-	let right;
-     for(let i = 0 ; i <str.length; i++){
-         right = arr[i];
-	 }
-	let left;
-	for(let i = str.length-1 ; i >=0 ; i--){
-		left = arr[i];
-	}
-	if(right == left){
-		return true;
-	}
-	else{
-		return false;
-	}
+	 const cleanStr = str.replace(/[^a-z0-9]/gi, '').toLowerCase();
+
+  // Check if the cleaned string is equal to its reverse
+  return cleanStr === cleanStr.split('').reverse().join('');
 }
 module.exports = palindrome
